@@ -1,30 +1,46 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #fefefe;
-  color: #000000;
+  background-color: #f4f4f4;
+  color: #000;
+  height: 100%;
+  font-family: Montserrat, sans-serif;
 }
 
-.branding {
-  padding-top: 5px;
-  padding-bottom: 10px;
-  background: #fefefe;
+.container {
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#branding {
+  padding: 15px 0;
   text-align: center;
-  border-bottom: 5px solid #000000;
+  background: #000;
+  border-radius: 5px;
+}
+
+#branding h1 {
+  color: #fefefe;
+  font-size: 3rem;
+  font-weight: 1000;
 }
 
 .tabs {
-  background: #7ccc3b;
-  padding-top: 10px;
-  border-bottom: 3px solid #3d3d3d;
+  border-right: none;
+  margin-bottom: 30px;
 }
 
 .tabs .container {
-  max-width: 70%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1rem;
@@ -33,14 +49,146 @@ body {
   text-align: center;
 }
 
-.tabs h3 {
+.tab-item {
+  background: #000000;
+  border-radius: 5px;
+  padding: 0.3rem 0;
+}
+.tabs p {
   color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
 }
 
-/* Container */
-.container-2 {
-  max-width: 70%;
-  margin: auto;
-  overflow: hidden;
-  padding: 0 2rem;
+.tab-item:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.tab-border {
+  border-bottom: #5e55ad 5px solid;
+}
+
+/* Forms*/
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+textarea,
+select {
+  height: 38px;
+  width: 100%;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #000;
+  outline: 0;
+}
+label,
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+}
+label > .label-body {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+form > div {
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.button,
+input[type="submit"] {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.button:hover,
+input[type="submit"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus {
+  color: #333;
+  border-color: #888;
+  outline: 0;
+}
+
+.added-heading {
+  margin: 4px 0;
+  font-size: 1.5rem;
+}
+
+li {
+  line-height: 1.5rem;
+}
+
+/* Hide initial content */
+#tab-1-content,
+#tab-2-content,
+#tab-3-content,
+#tab-4-content {
+  display: none;
+  opacity: 0;
+}
+
+.show {
+  display: block !important;
+  opacity: 1 !important;
 }

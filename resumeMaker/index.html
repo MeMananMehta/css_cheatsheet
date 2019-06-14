@@ -4,223 +4,172 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
+
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Resume Maker</title>
   </head>
-
   <body>
-    <header class="branding">
-      <h4>Welcome to Resume Designer</h4>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1>Welcome to Resume Maker</h1>
+        </div>
+      </div>
     </header>
 
     <section class="tabs">
-      <div class="container-2">
+      <div class="container">
         <div id="tab-1" class="tab-item tab-border">
-          <h3>Basic Details</h3>
+          <p>Basic Details</p>
         </div>
         <div id="tab-2" class="tab-item">
-          <h3>Academic Details</h3>
+          <p>Academic Details</p>
         </div>
         <div id="tab-3" class="tab-item">
-          <h3>Projects</h3>
+          <p>Skills</p>
         </div>
         <div id="tab-4" class="tab-item">
-          <h3>Work Experience</h3>
+          <p>Work Experience</p>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="tab-content">
+      <!--Basic Details tab-->
       <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-title">
-                  <span>
-                    Basic Details
-                  </span>
-                </div>
-                <div class="row">
-                  <form id="form">
-                    <div class="input-field col s12">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" />
-                    </div>
-                    <div class="input-field col s12">
-                      <input type="email" id="email" />
-                      <label for="email">E-Mail</label>
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="phone-no">Phone No.</label>
-                      <input type="number" id="phone" />
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="github">Github Link</label>
-                      <input type="text" id="github" />
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="heading">Main Heading (Max. 15 Words)</label>
-                      <input type="text" id="heading" />
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="about">About Yourself (Max. 150 Words)</label>
-                      <input type="text" id="about" />
-                    </div>
-                  </form>
-                </div>
-              </div>
+        <div id="tab-1-content" class="tab-content-item show">
+          <form id="form">
+            <div class="input-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" required />
             </div>
-          </div>
+            <div class="input-field">
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="input-field">
+              <label for="phone-no">Phone No.</label>
+              <input type="number" id="phone" required />
+            </div>
+            <div class="input-field">
+              <label for="github">Github Link</label>
+              <input type="text" id="github" required />
+            </div>
+            <div class="input-field">
+              <label for="heading">Main Heading (Max. 15 Words)</label>
+              <input type="text" id="heading" required />
+            </div>
+            <div class="input-field">
+              <label for="about">About Yourself (Max. 150 Words)</label>
+              <textarea rows="4" cols="50" required></textarea>
+            </div>
+            <div class="input-field">
+              <label for="profile">Profile Picture</label>
+              <input type="file" id="profile" required />
+            </div>
+          </form>
         </div>
       </div>
-    </section>
 
-    <section>
+      <!--Academic details tab-->
       <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-title">
-                  <span>
-                    Academic Details
-                  </span>
-                </div>
-                <div class="row">
-                  <form id="form">
-                    <div class="input-field col s12">
-                      <label for="qualification">Qualification</label>
-                      <input type="text" id="qualification" />
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="college">College</label>
-                      <input type="text" id="college" />
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="university">University</label>
-                      <input type="text" id="university" />
-                    </div>
-                    <div class="input-field col">
-                      <p>Start Date</p>
-                      <input type="date" id="start-date-academic" />
-                    </div>
-                    <div class="input-field col">
-                      <p>End Date</p>
-                      <input type="date" id="end-date-academic" />
-                    </div>
-                    <div class="input-field col s12">
-                      <input type="submit" value="Add" class="btn" />
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="card-action">
-                <h5 class="card-action-title">Details Added</h5>
-                <br />
-                <ul class="collection-academic"></ul>
-              </div>
+        <div id="tab-2-content" class="tab-content-item">
+          <form id="form">
+            <div class="input-field">
+              <label for="qualification">Qualification</label>
+              <input type="text" id="qualification" />
             </div>
+            <div class="input-field">
+              <label for="college">College</label>
+              <input type="text" id="college" />
+            </div>
+            <div class="input-field">
+              <label for="university">University</label>
+              <input type="text" id="university" />
+            </div>
+            <div class="input-field">
+              <label for="start-date-academic">Start Date</label>
+              <input type="date" id="start-date-academic" />
+            </div>
+            <div class="input-field">
+              <label for="end-date-academic">End Date</label>
+              <input type="date" id="end-date-academic" />
+            </div>
+            <input type="submit" value="Add" class="button" />
+          </form>
+
+          <hr />
+          <div class="academic-added">
+            <h5 class="added-heading">Details Added</h5>
+            <br />
+            <ul class="collection-academic">
+              <li>test1</li>
+              <li>test1</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
 
-    <section>
-        <div class="container">
-          <div class="row">
-            <div class="col s12">
-              <div class="card">
-                <div class="card-content">
-                  <div class="card-title">
-                    <span>Skills</span>
-                  </div>
-                  <div class="row">
-                    <form action="">
-                      <div class="input-field col s12">
-                        <input type="text" name="Skill Name" />
-                        <label for="skill-name">Skill Name</label>
-                      </div>
-                      <div class="input-field col s12">
-                        <input type="text" />
-                        <label for="skill-rating">Rate your skill out of 5</label>
-                      </div>
-                      <div class="input-field col s12">
-                          <input type="submit" value="Add" class="btn" />
-                      </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="card-action">
-                      <h5 class="card-action-title">Details Added</h5>
-                      <br />
-                      <ul class="collection-skills"></ul>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <section>
+      <!--Skills tab-->
       <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-title">
-                  <span>
-                    Work Experience
-                  </span>
-                </div>
-                <div class="row">
-                  <form id="form">
-                    <div class="input-field col s12">
-                      <label for="role">Role</label>
-                      <input type="text" id="role" />
-                    </div>
-                    <div class="input-field col s12">
-                      <label for="company">Company</label>
-                      <input type="text" id="company" />
-                    </div>
-                    <div class="input-field col">
-                      <p>Start Date</p>
-                      <input type="date" id="start-date-work" />
-                    </div>
-                    <div class="input-field col">
-                      <p>End Date</p>
-                      <input type="date" id="end-date-work" />
-                    </div>
-                    <div class="input-field col s12">
-                      <input type="submit" value="Add" class="btn" />
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="card-action">
-                <h5 class="card-action-title">Details Added</h5>
-                <br />
-                <ul class="collection-work"></ul>
-              </div>
+        <div id="tab-3-content" class="tab-content-item">
+          <form>
+            <div class="input-field">
+              <label for="skill-name">Skill Name</label>
+              <input type="text" id="Skill Name" />
             </div>
+            <div class="input-field">
+              <label for="skill-rating">Rate your skill out of 5</label>
+              <input type="text" id="skill-rating" />
+            </div>
+            <input type="submit" value="Add" class="button" />
+          </form>
+          <hr />
+
+          <div class="skills-added">
+            <h5 class="added-heading">Details Added</h5>
+            <br />
+            <ul class="collection-skills">
+              <li>test1</li>
+              <li>test1</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    
+    <!--Work Experience-->
+    <div class="container">
+      <div id="tab-4-content" class="tab-content-item">
+        <form>
+          <div class="input-field">
+            <label for="skill-name">Skill Name</label>
+            <input type="text" id="Skill Name" />
+          </div>
+          <div class="input-field">
+            <label for="skill-rating">Rate your skill out of 5</label>
+            <input type="text" id="skill-rating" />
+          </div>
+          <input type="submit" value="Add" class="button" />
+        </form>
+        <hr />
+
+        <div class="skills-added">
+          <h5 class="added-heading">Details Added</h5>
+          <br />
+          <ul class="collection-skills">
+            <li>test1</li>
+            <li>test1</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
