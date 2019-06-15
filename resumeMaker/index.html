@@ -147,26 +147,72 @@
     <!--Work Experience-->
     <div class="container">
       <div id="tab-4-content" class="tab-content-item">
-        <form>
-          <div class="input-field">
-            <label for="skill-name">Skill Name</label>
-            <input type="text" id="Skill Name" />
+        <p class="added-heading">What do you want to add?</p>
+        <div class="work-tabs">
+          <div class="tab-4-item" id="tab-4-work">
+            <input type="radio" name="work" id="project" value="project" />
+            <p>Add a project</p>
           </div>
-          <div class="input-field">
-            <label for="skill-rating">Rate your skill out of 5</label>
-            <input type="text" id="skill-rating" />
+          <div class="tab-4-item" id="tab-4-project">
+            <input type="radio" name="work" id="work" value="work" />
+            <p>Add a job</p>
           </div>
-          <input type="submit" value="Add" class="button" />
-        </form>
-        <hr />
+        </div>
+        <div class="tab-4-content-item" id="tab-4-work-content">
+          <form id="form">
+            <div class="input-field">
+              <label for="project-name">Project Name</label>
+              <input type="text" id="project-name" />
+            </div>
+            <div class="input-field">
+              <label for="project-description">Project Description</label>
+              <textarea
+                rows="4"
+                cols="50"
+                required
+                id="project-description"
+              ></textarea>
+            </div>
+          </form>
 
-        <div class="skills-added">
-          <h5 class="added-heading">Details Added</h5>
-          <br />
-          <ul class="collection-skills">
-            <li>test1</li>
-            <li>test1</li>
-          </ul>
+          <hr />
+
+          <div class="project-added">
+            <h5 class="added-heading">Details Added</h5>
+            <br />
+            <ul class="collection-project ">
+              <li>test1</li>
+              <li>test1</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-4-content-item" id="tab-4-project-content">
+          <form id="form">
+            <div class="input-field">
+              <label for="work-name">Role</label>
+              <input type="text" id="work-name" />
+            </div>
+            <div class="input-field">
+              <label for="work-description">Job Description</label>
+              <textarea
+                rows="4"
+                cols="50"
+                required
+                id="work-description"
+              ></textarea>
+            </div>
+          </form>
+
+          <hr />
+
+          <div class="work-added">
+            <h5 class="added-heading">Details Added</h5>
+            <br />
+            <ul class="collection-project ">
+              <li>test1</li>
+              <li>test1</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

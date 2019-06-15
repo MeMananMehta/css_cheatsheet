@@ -30,7 +30,7 @@ header {
 }
 
 #branding h1 {
-  color: #fefefe;
+  color: #fff;
   font-size: 3rem;
   font-weight: 1000;
 }
@@ -50,24 +50,26 @@ header {
 }
 
 .tab-item {
-  background: #000000;
+  background: #f4f4f4;
   border-radius: 5px;
   padding: 0.3rem 0;
+  border: #000 2px solid;
 }
 .tabs p {
-  color: #fff;
   font-size: 1rem;
   font-weight: 600;
   padding: 0.5rem;
 }
 
 .tab-item:hover {
-  opacity: 0.9;
+  background: #000;
+  color: #fff;
   cursor: pointer;
 }
 
 .tab-border {
-  border-bottom: #5e55ad 5px solid;
+  background: #000;
+  color: #fff;
 }
 
 /* Forms*/
@@ -171,7 +173,7 @@ input[type="submit"]:focus {
 }
 
 .added-heading {
-  margin: 4px 0;
+  margin: 15px 0;
   font-size: 1.5rem;
 }
 
@@ -183,7 +185,9 @@ li {
 #tab-1-content,
 #tab-2-content,
 #tab-3-content,
-#tab-4-content {
+#tab-4-content,
+#tab-4-content-project,
+#tab-4-content-work {
   display: none;
   opacity: 0;
 }
@@ -191,4 +195,21 @@ li {
 .show {
   display: block !important;
   opacity: 1 !important;
+}
+
+.work-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.work-tabs p {
+  display: inline;
+}
+
+.work-tabs > div {
+  margin: 20px 0;
 }
