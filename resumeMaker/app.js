@@ -5,7 +5,7 @@ tabItems.forEach(item => item.addEventListener("click", selectItem));
 
 function selectItem(e) {
   removeBorder();
-  this.classList.add("tab-border");
+  this.classList.add("tab-inverse");
 
   removeShow();
   const tabContentSelected = document.querySelector(`#${this.id}-content`);
@@ -13,7 +13,7 @@ function selectItem(e) {
 }
 
 function removeBorder() {
-  tabItems.forEach(item => item.classList.remove("tab-border"));
+  tabItems.forEach(item => item.classList.remove("tab-inverse"));
 }
 
 function removeShow() {
@@ -24,10 +24,19 @@ function removeShow() {
 const tab4Items = document.querySelectorAll(".tab-4-item");
 const tab4Contents = document.querySelectorAll(".tab-4-content-item");
 
-if (document.getElementById("project")) {
+tab4Items.forEach(item => item.addEventListener("click", selectItem2));
+
+function selectItem2(e) {
+  removeBorder2();
+  this.classList.add("tab-inverse");
+
   removeShow2();
-  const tab4ContentSelected = document.querySelector(`#tab-4-project-content`);
-  tab4ContentSelected.classList.add("show");
+  const tabContent4Selected = document.querySelector(`#${this.id}-content`);
+  tabContent4Selected.classList.add("show");
+}
+
+function removeBorder2() {
+  tab4Items.forEach(item => item.classList.remove("tab-inverse"));
 }
 
 function removeShow2() {

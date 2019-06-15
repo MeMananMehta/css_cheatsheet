@@ -25,7 +25,7 @@
 
     <section class="tabs">
       <div class="container">
-        <div id="tab-1" class="tab-item tab-border">
+        <div id="tab-1" class="tab-item tab-inverse">
           <p>Basic Details</p>
         </div>
         <div id="tab-2" class="tab-item">
@@ -149,16 +149,14 @@
       <div id="tab-4-content" class="tab-content-item">
         <p class="added-heading">What do you want to add?</p>
         <div class="work-tabs">
-          <div class="tab-4-item" id="tab-4-work">
-            <input type="radio" name="work" id="project" value="project" />
+          <div id="tab-4-1" class="tab-4-item">
             <p>Add a project</p>
           </div>
-          <div class="tab-4-item" id="tab-4-project">
-            <input type="radio" name="work" id="work" value="work" />
+          <div id="tab-4-2" class="tab-4-item">
             <p>Add a job</p>
           </div>
         </div>
-        <div class="tab-4-content-item" id="tab-4-work-content">
+        <div class="tab-4-content-item" id="tab-4-1-content">
           <form id="form">
             <div class="input-field">
               <label for="project-name">Project Name</label>
@@ -173,6 +171,7 @@
                 id="project-description"
               ></textarea>
             </div>
+            <input type="submit" value="Add" class="button" />
           </form>
 
           <hr />
@@ -186,7 +185,7 @@
             </ul>
           </div>
         </div>
-        <div class="tab-4-content-item" id="tab-4-project-content">
+        <div class="tab-4-content-item" id="tab-4-2-content">
           <form id="form">
             <div class="input-field">
               <label for="work-name">Role</label>
@@ -201,6 +200,7 @@
                 id="work-description"
               ></textarea>
             </div>
+            <input type="submit" value="Add" class="button" />
           </form>
 
           <hr />
@@ -209,8 +209,8 @@
             <h5 class="added-heading">Details Added</h5>
             <br />
             <ul class="collection-project ">
-              <li>test1</li>
-              <li>test1</li>
+              <li>test12</li>
+              <li>test13</li>
             </ul>
           </div>
         </div>
