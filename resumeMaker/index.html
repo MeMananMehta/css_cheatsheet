@@ -44,34 +44,34 @@
       <!--Basic Details tab-->
       <div class="container">
         <div id="tab-1-content" class="tab-content-item show">
-          <form id="form">
+          <form id="basic-form" class="form">
             <div class="input-field">
               <label for="name">Name</label>
-              <input type="text" id="name" required />
+              <input type="text" name="name" id="name" />
             </div>
             <div class="input-field">
               <label for="email">E-Mail</label>
-              <input type="email" id="email" required />
+              <input type="email" name="email" id="email" />
             </div>
             <div class="input-field">
               <label for="phone-no">Phone No.</label>
-              <input type="number" id="phone" required />
+              <input type="number" name="phone-no" id="phone-no" />
             </div>
             <div class="input-field">
               <label for="github">Github Link</label>
-              <input type="text" id="github" required />
+              <input type="text" name="github" id="github" />
             </div>
             <div class="input-field">
               <label for="heading">Main Heading (Max. 15 Words)</label>
-              <input type="text" id="heading" required />
+              <input type="text" name="heading" id="heading" />
             </div>
             <div class="input-field">
               <label for="about">About Yourself (Max. 150 Words)</label>
-              <textarea rows="4" cols="50" required></textarea>
+              <textarea rows="4" cols="50" id="about" name="about"></textarea>
             </div>
             <div class="input-field">
               <label for="profile">Profile Picture</label>
-              <input type="file" id="profile" required />
+              <input type="file" name="profile" id="profile" />
             </div>
           </form>
         </div>
@@ -80,28 +80,41 @@
       <!--Academic details tab-->
       <div class="container">
         <div id="tab-2-content" class="tab-content-item">
-          <form id="form">
+          <form id="academic-form" class="form">
             <div class="input-field">
               <label for="qualification">Qualification</label>
-              <input type="text" id="qualification" />
+              <input type="text" name="qualification" id="qualification" />
             </div>
             <div class="input-field">
               <label for="college">College</label>
-              <input type="text" id="college" />
+              <input type="text" name="college" id="college" />
             </div>
             <div class="input-field">
               <label for="university">University</label>
-              <input type="text" id="university" />
+              <input type="text" name="university" id="university" />
             </div>
             <div class="input-field">
               <label for="start-date-academic">Start Date</label>
-              <input type="date" id="start-date-academic" />
+              <input
+                type="date"
+                name="start-date-academic"
+                id="start-date-academic"
+              />
             </div>
             <div class="input-field">
               <label for="end-date-academic">End Date</label>
-              <input type="date" id="end-date-academic" />
+              <input
+                type="date"
+                name="end-date-academic"
+                id="end-date-academic"
+              />
             </div>
-            <input type="submit" value="Add" class="button" />
+            <input
+              type="submit"
+              value="Add"
+              class="button"
+              id="academic-add-button"
+            />
           </form>
 
           <hr />
@@ -119,16 +132,21 @@
       <!--Skills tab-->
       <div class="container">
         <div id="tab-3-content" class="tab-content-item">
-          <form>
+          <form id="skills-form" class="form">
             <div class="input-field">
-              <label for="skill-name">Skill Name</label>
-              <input type="text" id="Skill Name" />
+              <label for="skill-name">Skill</label>
+              <input type="text" name="skill-name" id="skill-name" />
             </div>
             <div class="input-field">
               <label for="skill-rating">Rate your skill out of 5</label>
-              <input type="text" id="skill-rating" />
+              <input type="text" name="skill-rating" id="skill-rating" />
             </div>
-            <input type="submit" value="Add" class="button" />
+            <input
+              type="submit"
+              value="Add"
+              class="button"
+              id="skill-add-button"
+            />
           </form>
           <hr />
 
@@ -157,21 +175,26 @@
           </div>
         </div>
         <div class="tab-4-content-item" id="tab-4-1-content">
-          <form id="form">
+          <form id="project-form" class="form">
             <div class="input-field">
               <label for="project-name">Project Name</label>
-              <input type="text" id="project-name" />
+              <input type="text" name="project-name" id="project-name" />
             </div>
             <div class="input-field">
               <label for="project-description">Project Description</label>
               <textarea
                 rows="4"
                 cols="50"
-                required
+                name="project-description"
                 id="project-description"
               ></textarea>
             </div>
-            <input type="submit" value="Add" class="button" />
+            <input
+              type="submit"
+              value="Add"
+              class="button"
+              id="project-add-button"
+            />
           </form>
 
           <hr />
@@ -179,28 +202,33 @@
           <div class="project-added">
             <h5 class="added-heading">Details Added</h5>
             <br />
-            <ul class="collection-project ">
+            <ul class="collection-project">
               <li>test1</li>
               <li>test1</li>
             </ul>
           </div>
         </div>
         <div class="tab-4-content-item" id="tab-4-2-content">
-          <form id="form">
+          <form id="work-form" class="form">
             <div class="input-field">
               <label for="work-name">Role</label>
-              <input type="text" id="work-name" />
+              <input type="text" name="work-name" id="work-name" />
             </div>
             <div class="input-field">
               <label for="work-description">Job Description</label>
               <textarea
                 rows="4"
                 cols="50"
-                required
+                name="work-description"
                 id="work-description"
               ></textarea>
             </div>
-            <input type="submit" value="Add" class="button" />
+            <input
+              type="submit"
+              value="Add"
+              class="button"
+              id="work-add-button"
+            />
           </form>
 
           <hr />
@@ -208,7 +236,7 @@
           <div class="work-added">
             <h5 class="added-heading">Details Added</h5>
             <br />
-            <ul class="collection-project ">
+            <ul class="collection-work">
               <li>test12</li>
               <li>test13</li>
             </ul>
