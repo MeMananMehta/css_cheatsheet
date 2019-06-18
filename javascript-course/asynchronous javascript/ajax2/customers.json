@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name":"John Doe",
+    "company":"hello world",
+    "phone":"99-232-1312"
+  },
+  {
+    "id": 2,
+    "name":"Manan Mehta",
+    "company":"google",
+    "phone":"99-232-1436"
+  },
+  {
+    "id": 3,
+    "name":"Rocky",
+    "company":"turnip",
+    "phone":"99-353-345"
+  }
+
+]
