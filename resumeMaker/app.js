@@ -70,8 +70,8 @@ const profileInput = document.querySelector("#profile");
 const qualificationInput = document.querySelector("#qualification");
 const collegeInput = document.querySelector("#college");
 const universityInput = document.querySelector("#university");
-const startAcademicInput = document.querySelector("#start-date-academic");
-const endAcademicInput = document.querySelector("#end-date-academic");
+const startAcademicInput = document.querySelector("#start-academic");
+const endAcademicInput = document.querySelector("#end-academic");
 
 //skills input fields
 const skillNameInput = document.querySelector("#skill-name");
@@ -100,29 +100,93 @@ loadEventListeners();
 
 function loadEventListeners() {
   academicForm.addEventListener("submit", addAcademic);
+  skillsForm.addEventListener("submit", addSkill);
+  projectForm.addEventListener("submit", addProject);
+  workForm.addEventListener("submit", addWork);
 }
 
 function addAcademic(e) {
   if (
     qualificationInput.value === "" ||
     collegeInput.value === "" ||
-    universityInput.value === ""
+    universityInput.value === "" ||
+    startAcademicInput === "" ||
+    endAcademicInput === ""
   ) {
     alert("Please enter all fields!");
+  } else {
+    const li = document.createElement("li");
+    li.className = "collection-academic-item";
+    const data =
+      qualificationInput.value +
+      ", " +
+      collegeInput.value +
+      ", " +
+      universityInput.value +
+      ", " +
+      "( " +
+      startAcademicInput.value +
+      " - " +
+      endAcademicInput.value +
+      " )";
+    li.appendChild(document.createTextNode(data));
+
+    academicList.appendChild(li);
+
+    (qualificationInput.value = ""),
+      (collegeInput.value = ""),
+      (universityInput.value = ""),
+      (startAcademicInput.value = ""),
+      (endAcademicInput.value = "");
   }
+  e.preventDefault();
+}
 
-  const li = document.createElement("li");
-  li.className = "collection-academic item";
-  const data =
-    qualificationInput.value +
-    "," +
-    collegeInput.value +
-    "," +
-    universityInput.value +
-    "," +
-    "(";
-  li.appendChild(document.createTextNode(data));
-  academicList.appendChild(li);
+function addSkill(e) {
+  if (skillNameInput.value === "" || skillRatingInput.value === "") {
+    alert("Please enter all fields!");
+  } else {
+    const li = document.createElement("li");
+    li.className = "collection-skills-item";
+    const data = skillNameInput.value + "  -  " + skillRatingInput.value;
+    li.appendChild(document.createTextNode(data));
 
+    skillsList.appendChild(li);
+
+    (skillNameInput.value = ""), (skillRatingInput.value = "");
+  }
+  e.preventDefault();
+}
+
+function addProject(e) {
+  if (projectNameInput.value === "" || projectDescriptionInput.value === "") {
+    alert("Please enter all fields!");
+  } else {
+    const li = document.createElement("li");
+    li.className = "collection-project-item";
+    const data =
+      projectNameInput.value + "  -  " + projectDescriptionInput.value;
+    li.appendChild(document.createTextNode(data));
+
+    projectList.appendChild(li);
+
+    (projectNameInput.value = ""), (projectDescriptionInput.value = "");
+  }
+  e.preventDefault();
+}
+
+function addWork(e) {
+  if (workNameInput.value === "" || workDescriptionInput.value === "") {
+    alert("Please enter all fields!");
+  } else {
+    const li = document.createElement("li");
+    li.className = "collection-work-item";
+    const data = workNameInput.value + "  -  " + workDescriptionInput.value;
+    li.appendChild(document.createTextNode(data));
+
+    workList.appendChild(li);
+
+    (workNameInput.value = ""), (workDescriptionInput.value = "");
+  }
   e.preventDefault();
 }
