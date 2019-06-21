@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  font-family: Raleway, sans-serif;
+}
+.container {
+  width: 70%;
+  margin: auto;
+  overflow: hidden;
+}
+
+header {
+  height: 20px;
+  background: #000;
+  margin: 10px 0;
+}
+
+.wrapper {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-gap: 0.3rem;
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.wrapper > div {
+  border: 1px solid #333;
+  padding: 0em;
+}
+#image-box {
+  grid-column: 1;
+  grid-row: 1;
+  width: 200px;
+  height: 200px;
+}
+
+#name-box {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+}
+#links-box {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: center;
+  text-align: right;
+  line-height: 25px;
+}
+
+#main-heading-box {
+  margin-top: -30px;
+  grid-column: 2/4;
+  grid-row: 2;
+  text-align: left;
+}
+
+#main-heading-box p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#name-box > p {
+  line-height: 60px;
+  letter-spacing: 2px;
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  font-size: 60px;
+  font-weight: 100;
+}
+
+.first-name {
+  margin-top: 10px;
+}
+
+.last-name {
+  color: rgb(214, 55, 55);
+}
+
+.fa-cog {
+  color: #d44638;
+}
