@@ -1,21 +1,22 @@
-class Weather{
-  constructor(city, state){
-    this.apiKey = "";
+class Weather {
+  constructor(city) {
+    this.apiKey = "7e0ba7033ac6e6ea066d0276bcdcb0b1";
     this.city = city;
-    this.state = state;
   }
 
   //fetch weather from api
-  async getWeather(){
-    const response = await fetch(place api url here);
+  async getWeather() {
+    const response = await fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=${this.city}&APPID=${
+        this.apiKey
+      }`
+    );
     const responseData = await response.json();
-
-    return responseData.current_observation;
+    return responseData;
   }
 
   //change weather location
-  changeLoaction(city, state){
+  changeLocation(city) {
     this.city = city;
-    this.state = state;
   }
 }
